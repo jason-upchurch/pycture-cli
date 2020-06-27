@@ -1,2 +1,2 @@
 # pycture-parse
-a photo management project
+an image management project
