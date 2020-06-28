@@ -35,8 +35,4 @@ def find_text(text, exclude=None):
         print(flagged_issues, '\n')
 
 
-if __name__ == '__main__':
-    exclude = "NOT MYAPIKEY NOT DEMO_KEY"
-    find_text(r'NICAR16')
-                    
     
