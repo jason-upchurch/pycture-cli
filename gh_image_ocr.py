@@ -60,7 +60,7 @@ for result in results:
                 enhancer = ImageEnhance.Sharpness(img)
                 img = enhancer.enhance(5)
                 text = pytesseract.image_to_string(img).lower()
-                if (args.keyword.lower() in text or "api key" in text):
+                if args.keyword.lower() in text:
                     i+=1
                     print('\n', i, ' possible secret found: ', match.strip(), '\n')
                     if result.issue.html_url in flagged.keys():
