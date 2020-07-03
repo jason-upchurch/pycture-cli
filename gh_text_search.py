@@ -19,6 +19,7 @@ if GITHUB_TOKEN and GITHUB_USERNAME:
 else:
     sys.exit('login failed\n')
 
+
 def find_text(text, exclude=None):
     results = gh.search_issues("{} in:body,comments,code user:fecgov".format(text))
     flagged_issues = {'body': [], 'comments': []}
@@ -33,6 +34,3 @@ def find_text(text, exclude=None):
                 flagged_issues['body'].append(result.issue.html_url)
         print('\nflagged_issues so far...\n')
         print(flagged_issues, '\n')
-
-
-    
